@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Fira Sans", serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f9f9f9;
+    width: 80ch;
+    margin: 0 auto;
+}
+
+/* navbar */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #414a4c;
+    font-size: 1.2rem;
+    padding: 0.6rem;
+}
+
+.centerNav a:hover {
+    background-color: #414a4c;
+    color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.rightNav a {
+    border: 2px solid #414a4c;
+    border-radius: 5px;
+    padding: 0.4rem;
+}
+
+.rightNav a:hover {
+    background-color: #414a4c;
+    color: #f9f9f9;
+}
+
+/* Home */
+
+h1 {
+    font-family: "Fira Sans", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.animatedText {
+    font-size: 2rem;
+}
+
+.animatedText span {
+    position: relative;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.animatedText span::before {
+    content: "Web Designer";
+    color: #414a4c;
+    animation: words 12s infinite;
+}
+
+.animatedText span::after {
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #f9f9f9;
+    border-left: 2px solid red;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid white;
+    }
+}
+
+@keyframes words {
+    0%,33% {
+        content: "web developer.";
+    }
+    34%,66% {
+        content: "graphic designer.";
+    }
+    67%,100% {
+        content: "creative.";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95% {
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85% {
+        width: calc(100% + 8px);
+    }
+}
+
+/* about */
+
+.about p {
+    line-height: 1.8rem;
+    font-size: 1rem;
+}
+
+.cardContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 50px;
+}
+
+.card {
+    width: 25ch;
+    border: 2px solid #414a4c;
+    border-radius: 10px;
+    padding: 1rem;
+
+}
+
+.card img {
+    width: 10ch;
+    height: auto;
+}
