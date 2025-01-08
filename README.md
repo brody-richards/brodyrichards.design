@@ -1,0 +1,2 @@
+# brodyrichards.design
+ personal website
