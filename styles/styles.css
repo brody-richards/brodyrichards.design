@@ -190,92 +190,55 @@ video {
     height: auto;
 }
 
+.project {
+    margin-top: 4rem;
+}
+
 /* gallery */
-.slideshowContainer {
-    max-width: 1000px;
+.gallery-container {
     position: relative;
-    margin: auto;
+    max-width: 80ch;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
-.mySlides {
-    display: none;
+.gallery {
+    display: flex;
+    transition: transform 0.5s ease;
 }
 
-.prev, .next {
-    cursor: pointer;
+.gallery img {
+    width: 100%;
+    display: block;
+}
+
+.arrow {
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -35px;
-    padding: 16px;
-    color: black;
-    font-weight: bold;
-    font-size: 40px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.prev:hover, .next:hover {
-    background-color: #414a4c;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
-}
-
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-.dot {
+    border: none;
+    font-size: 18px;
+    padding: 10px;
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
     border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+    z-index: 10;
 }
 
-.active, .dot:hover {
-    background-color: #717171;
+.arrow:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    transition: ease-in 0.1s;
 }
 
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
+.arrow.left {
+    left: 10px;
 }
 
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+.arrow.right {
+    right: 10px;
 }
 
-.slideshowContainer img {
-    width: 100%;
-}
-
-.circles {
-    text-align: center;
-}
 
 
 
@@ -297,4 +260,3 @@ footer {
     text-decoration: none;
     padding-top: 1rem;
 }
-

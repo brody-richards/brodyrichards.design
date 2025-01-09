@@ -1,28 +1,25 @@
-let slideIndex = 1;
-    showSlides(slideIndex);
-
-function plusSlides(n) {
-    showSlides(slideIndex += n);
+function prevImage(galleryId) {
+    const gallery = document.querySelector(`#${galleryId} .gallery`);
+    const totalImages = gallery.children.length;
+    const currentTransform = getComputedStyle(gallery).transform;
+    const currentTranslateX = currentTransform.includes('matrix') 
+        ? parseFloat(currentTransform.split(',')[4]) 
+        : 0;
+    const imageWidth = gallery.clientWidth;
+    const newTranslateX = Math.min(0, currentTranslateX + imageWidth);
+    gallery.style.transform = `translateX(${newTranslateX}px)`;
 }
 
-function currentSlide(n) {
-    showSlides(slideIndex = n);
+function nextImage(galleryId) {
+    const gallery = document.querySelector(`#${galleryId} .gallery`);
+    const totalImages = gallery.children.length;
+    const currentTransform = getComputedStyle(gallery).transform;
+    const currentTranslateX = currentTransform.includes('matrix') 
+        ? parseFloat(currentTransform.split(',')[4]) 
+        : 0;
+    const imageWidth = gallery.clientWidth;
+    const maxTranslateX = -(imageWidth * (totalImages - 1));
+    const newTranslateX = Math.max(maxTranslateX, currentTranslateX - imageWidth);
+    gallery.style.transform = `translateX(${newTranslateX}px)`;
 }
-
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("shoeSlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-}
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-}
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-}
-
 
