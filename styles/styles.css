@@ -126,11 +126,11 @@ h1 {
 
 /* about */
 
-.about {
+#about {
     margin-bottom: 6rem;
 }
 
-.about p {
+#about p {
     line-height: 1.8rem;
     font-size: 1rem;
 }
@@ -315,7 +315,8 @@ hr::after {
     font-family: "Bebas Neue", serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 2rem;
+    font-size: 2.4rem;
+    color: #ddd02c;
 }
 
 .olympusSpan {
@@ -323,7 +324,67 @@ hr::after {
     font-size: 1.4rem;
 }
 
+/* photo array */
 
+.photoHeading {
+    font-size: 2rem;
+}
+
+.photoArray {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    width: 80ch;
+    gap: 1rem;
+}
+
+.photoArray img {
+    width: 100%;
+    height: auto;
+}
+
+.photo1 {
+    grid-column: 1/7;
+    grid-row: 1/2;
+}
+
+.photo2 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+}
+
+.photo3 {
+    grid-column: 4/7;
+    grid-row: 2/3;
+}
+
+.text1 {
+    grid-column: 4/7;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 1.6rem;
+    margin: 1.2rem;
+    font-style: italic;
+}
+.photo4 {
+    grid-column: 1/4;
+    grid-row: 3/4;
+}
+
+.photo5 {
+    grid-column: 4/7;
+    grid-row: 3/4;
+}
+
+.photo6 {
+    grid-column: 1/4;
+}
+
+.photo7 {
+    grid-column: 4/7;
+}
 
 
 /* footer */
@@ -332,9 +393,13 @@ footer {
     padding: 2rem;
 }
 
+#contact {
+    margin-bottom: 3rem;
+}
+
 .links {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
@@ -343,4 +408,19 @@ footer {
     color: #f9f9f9;
     text-decoration: none;
     padding-top: 1rem;
+    margin: 0 1rem;
+}
+
+.links a:hover {
+    color: black;
+}
+
+/* contact */
+
+
+
+
+
+.attributions {
+    margin: 0 auto;
 }
