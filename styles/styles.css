@@ -7,6 +7,11 @@
 * {
     box-sizing: border-box;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Fira Sans", serif;
     font-weight: 400;
@@ -160,13 +165,15 @@ h1 {
     border-radius: 10px;
 }
 
-.projects ul {
+#projects ul {
     display: flex;
     flex-direction: row;
     padding: 0;
 }
 
-.projects ul li {
+
+
+.shoeProject ul li {
     list-style: none;
     background-color: #196ba3;
     color: #f9f9f9;
@@ -175,11 +182,20 @@ h1 {
     border-radius: 10px;
 }
 
+.lootboxProject ul li {
+    list-style: none;
+    background-color: #15514a;
+    color: #f9f9f9;
+    padding: 0.8rem;
+    margin: 0 0.2rem;
+    border-radius: 10px;
+}
+
 video {
     width: 100%;
 }
 
-.projects p {
+#projects p {
     line-height: 1.8rem;
 }
 
